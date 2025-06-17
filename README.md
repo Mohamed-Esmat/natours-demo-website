@@ -1,13 +1,13 @@
 # 🌿 Natours — Nature Tours Website
 
 > A beautifully animated, fully responsive website for a fictional nature tour company.
-> Built with cutting-edge CSS features — no JavaScript needed! 😎
+> Built with cutting-edge SCSS features — no JavaScript needed! 😎
 
 ---
 
 ## 📌 Overview
 
-**Natours** is a fictional company that offers adventure tours in nature. This elegant and modern website showcases interactive animations, custom UI components, and sleek transitions — all created with **pure HTML and CSS**.
+**Natours** is a fictional company that offers adventure tours in nature. This elegant and modern website showcases interactive animations, custom UI components, and sleek transitions — all created with **pure HTML and SCSS**.
 
 This project was crafted from scratch as a key part of an advanced CSS course, focusing on real-world techniques like:
 
@@ -17,14 +17,15 @@ This project was crafted from scratch as a key part of an advanced CSS course, f
 * CSS-only navigation and modals
 * Background video integration 🎥
 
-> 🔗 **Live Demo**: [https://natours-esmat.netlify.app/](https://natours-esmat.netlify.app/)
+> 🔗 **Live Demo**: [https://natours-esmat.netlify.app/](https://natours-esmat.netlify.app/))
 
 ---
 
 ## 🛠️ Technologies Used
 
 * **HTML5** – Semantic and accessible structure
-* **CSS3** – Animations, custom components, transitions, and layout (Flexbox + Grid)
+* **SCSS (Sass)** – Variables, nesting, mixins, reusable styles
+* **CSS3** – Animations, transitions, Flexbox, and Grid layout
 * **Google Fonts** – Lato font for clean, modern typography
 * **Favicon & Hero Imagery** – High-quality branding assets
 * **Responsive Design** – Mobile-first and optimized across breakpoints
@@ -47,9 +48,15 @@ This project was crafted from scratch as a key part of an advanced CSS course, f
 
 ```
 natours/
-├── index.html         # Starter HTML with Lato font, favicon, and linked CSS
+├── index.html         # Starter HTML with Lato font, favicon, and linked SCSS/CSS
 ├── css/
-│   └── style.css      # Empty CSS starter with brand color variables
+│   └── style.css      # Compiled CSS output from SCSS
+├── sass/
+│   ├── main.scss      # Entry point
+│   ├── _variables.scss
+│   ├── _mixins.scss
+│   ├── _base.scss
+│   └── ... other partials
 ├── img/
 │   ├── background-video.mp4
 │   ├── hero.jpg
@@ -65,18 +72,23 @@ natours/
 * A clean HTML template with:
 
   * `<link>` to Google Fonts (Lato)
-  * `<link>` to external CSS
+  * `<link>` to compiled CSS
   * Favicon setup
+* SCSS setup:
+
+  * Variables for color palette
+  * Mixins for reusability
+  * Modular file structure with partials
 * Image assets:
 
   * Hero image
   * Company logos
   * Section backgrounds
   * Background video
-* Starter `style.css` with color palette:
+* Sample SCSS color variables:
 
-  ```css
-  /* Colors used in this project */
+  ```scss
+  // Colors used in this project
   $color-primary-light: #7ed56f;
   $color-primary-medium: #55c57a;
   $color-primary-dark: #28b485;
@@ -95,22 +107,32 @@ natours/
 2. **Open in your favorite editor**
    Recommended: [Visual Studio Code](https://code.visualstudio.com/)
 
-3. **Launch `index.html` in your browser**
-   You can use the VS Code Live Server extension or just open it manually.
+3. **Install Sass globally (if needed)**
 
-4. 💡 *No build tools or frameworks required — just open and start coding!*
+   ```bash
+   npm install -g sass
+   ```
+
+4. **Compile SCSS into CSS**
+
+   ```bash
+   sass sass/main.scss css/style.css --watch
+   ```
+
+5. **Launch `index.html` in your browser**
+   You can use the VS Code Live Server extension or open it manually.
 
 ---
 
 ## 💬 Final Notes
 
-This project is entirely built with **pure HTML and CSS**, pushing the limits of what modern CSS can achieve — no JavaScript involved!
+This project is entirely built with **HTML and SCSS**, pushing the limits of what modern CSS pre-processors can achieve — no JavaScript involved!
 
 Designed for learners eager to master:
 
-* Advanced layout systems
-* Reusable CSS animations
-* Elegant and functional UI patterns
+* Modular and scalable CSS architecture
+* Reusable SCSS variables and mixins
+* Elegant and interactive UI patterns
 
 ---
 
